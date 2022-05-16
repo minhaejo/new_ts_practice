@@ -71,4 +71,17 @@ function logTextLength<T extends LengthType>(text:T):T {
     
     return text
 }
-logTextLength("a")
+logTextLength("ag")
+//제네릭 타입제한 3 - key of
+
+
+interface ShoppingItem{
+    name:string,
+    price:number,
+    stock:number
+}
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption:T):T {
+    return itemOption;
+}
+
+getShoppingItemOption("name")
