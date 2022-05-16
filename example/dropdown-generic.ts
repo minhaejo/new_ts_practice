@@ -1,30 +1,35 @@
-interface Emails {
-  value:string,
-  selected:boolean
-}
-interface ProductNumber{
-  value:number,
+interface DropdownItem <T> {
+  value:T,
   selected:boolean
 }
 
-interface TrueFalse {
-  value:boolean,
-  selected:boolean
-}
+// interface Emails {
+//   value:string,
+//   selected:boolean
+// }
+// interface ProductNumber{
+//   value:number,
+//   selected:boolean
+// }
 
-const emails:Emails[] = [
+// interface TrueFalse {
+//   value:boolean,
+//   selected:boolean
+// }
+
+const emails:DropdownItem<string>[] = [
   { value: 'naver.com', selected: true },
   { value: 'gmail.com', selected: false },
   { value: 'hanmail.net', selected: false },
 ];
 
-const numberOfProducts:ProductNumber[] = [
+const numberOfProducts:DropdownItem<number>[] = [
   { value: 1, selected: true },
   { value: 2, selected: false },
   { value: 3, selected: false },
 ];
 
-function createDropdownItem(item:Emails|ProductNumber) {
+function createDropdownItem(item:DropdownItem<number>|DropdownItem<string>) {
   const option = document.createElement('option');
   option.value = item.value.toString();
   option.innerText = item.value.toString();
