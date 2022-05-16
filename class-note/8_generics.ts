@@ -34,3 +34,19 @@ const str = logText<string>("a")
 str.split("")
 const logIn = logText<boolean>(true)
 
+//인터페이스에 제네릭 설정하는 방법 
+// interface Dropdown {
+//     value:string,
+//     selected:boolean
+// }
+// const obj:Dropdown = {
+// value:"abc" , selected:false
+// }
+interface Dropdown<T>{
+ value :T
+ selected:boolean
+}
+const obj :Dropdown<string> ={
+    value:"abc",
+    selected:true
+}
