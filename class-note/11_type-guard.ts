@@ -28,7 +28,7 @@ if ((tony as Developer).skill) {
     console.log( (tony as Person ).age)
 }
 
-//타입가드
+//타입가드  is는 비교할 애의 속성 비교를 통한느낌
 function isDeveloper(target:Developer | Person) :target is Developer{
     return(target as Developer).skill !== undefined
 }
@@ -38,7 +38,6 @@ if (isDeveloper(tony)) {
     tony.skill
 }
     else{tony.age
-
     }
     
     
