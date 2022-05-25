@@ -28,10 +28,12 @@ if ((tony as Developer).skill) {
     console.log( (tony as Person ).age)
 }
 
-//타입가드  is는 비교할 애의 속성 비교를 통한느낌
+//타입가드  is는 비교할 애의 속성 비교를 통한느낌 
+//타입가드의 키워드 is를통해 리턴값을 디벨로퍼랑 비교 즉  , 넘겨받은 파라미터의 target이 Develper타입인지를 검증
 function isDeveloper(target:Developer | Person) :target is Developer{
     return(target as Developer).skill !== undefined
 }
+//이코드 구문을 통과하고 나면 타입가드가 됐다고 생각해도될듯
 
 
 if (isDeveloper(tony)) {
