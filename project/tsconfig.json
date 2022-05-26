@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "ES5",
+        "outDir": "./dist",
+        "moduleResolution": "Node",
+        "lib": ["ES2015","DOM","DOM.Iterable"],//프로미스 등등 뭐 에러 처리방지,
+        "noImplicitAny": true,
+        "typeRoots": ["./node_modules/@types","./types"],
+        "strict": true,
+        // "strictFunctionTypes": true
+        //@이는 정의된 데피니션 , 그냥은 내가 정의하는거라고 보면됨 노드모듈안에 @타입스 찾는다 이런의미임 첫번짼
+    },
+    "include": ["./src/**/*"]
+}
